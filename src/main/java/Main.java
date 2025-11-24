@@ -1,21 +1,20 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 
 // import static org.junit.jupiter.api.Assertions.assertEquals;
 // import org.junit.jupiter.api.Test;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj rozmiar: ");
-        int rozmiar = scanner.nextInt();
-
-        for (int i = 0; i <= rozmiar; i++) {
-            for (int j = 0; j < i; j++) {
-                System.out.print("*");
+        int n = 5;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == 0 || i == n - 1 || j == 0 || j == n - 1)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
             }
             System.out.println();
         }
-        scanner.close();
     }
 }
 
