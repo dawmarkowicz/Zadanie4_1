@@ -1,12 +1,21 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Service service = new Service();
-        Student student1 = new Student("Jan", 20);
-        Student student2 = new Student("Kowalski", 22);
-        service.zapiszStudenta(student1);
-        service.zapiszStudenta(student2);
 
-        System.out.println("Lista studentow:");
+        // dodawanie studenta
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj imie studenta: ");
+        String imie = scanner.nextLine();
+        System.out.println("Podaj wiek studenta: ");
+        int wiek = scanner.nextInt();
+
+        Student student = new Student(imie, wiek);
+
+        service.zapiszStudenta(student);
         service.wypiszStudentow();
+
+        scanner.close();
     }
 }

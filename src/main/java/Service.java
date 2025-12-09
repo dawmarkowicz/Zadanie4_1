@@ -8,7 +8,7 @@ public class Service {
       writer.close();
 
     } catch (Exception exeption) {
-      System.out.println("Error: " + exeption.getMessage());
+      System.out.println(exeption.getMessage());
     }
   }
 
@@ -22,7 +22,7 @@ public class Service {
       br.close();
 
     } catch (Exception exeption) {
-      System.out.println("Error: " + exeption.getMessage());
+      System.out.println(exeption.getMessage());
     }
   }
 }
