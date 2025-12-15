@@ -1,14 +1,20 @@
-// import static org.junit.jupiter.api.Assertions.assertEquals;
-
-// import org.junit.jupiter.api.Test;
+import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
-    System.out.println("Hello world!");
-  }
+    Service service = new Service();
 
-  // @Test
-  // void addition() {
-  //     assertEquals(2, 1 + 1);
-  // }
+    System.out.println("Dodaj nowego studenta:");
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Podaj imie studenta: ");
+    String imie = scanner.nextLine();
+    System.out.println("Podaj wiek studenta: ");
+    int wiek = scanner.nextInt();
+    Student student = new Student(imie, wiek);
+    service.zapiszStudenta(student);
+
+    System.out.println("Lista studentow:");
+    service.wypiszStudentow();
+    scanner.close();
+  }
 }
